@@ -1,0 +1,24 @@
+<div id="<%= dom_id company %>" class= "company-container card-image">
+  <p>
+    <strong>Name:</strong>
+    <%= company.name %>
+  </p>
+
+  <p>
+    <strong>Contact:</strong>
+    <%= company.contact %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= company.address %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= company.description %>
+  </p>
+  <p>
+    <%= link_to "Show this company", company, class: "company-link" %>
+  </p>
+</div>

@@ -1,0 +1,21 @@
+<div class="col-lg-6 mx-lg-auto">
+  <div class="card shadow">
+    <div class="card-header">
+      <div class="card-title">
+        <h2 class="text-primary pt-4">New Company</h2>
+      </div>
+      <div class="card-body">
+        <% if user_signed_in? && current_user.role == 'recuiter' %>
+          <%= render "form", company: @company %>
+          <% else %>
+            <%#= render "form", company: @company %>
+            <p class="text-danger">you are not authorized to create new company</p>
+        <% end %>
+        <br>
+        <div>
+          <%= link_to "Back to companies", companies_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
